@@ -1,0 +1,787 @@
+@import url("style.css");
+
+/* sidebar */
+.sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 240px;
+    padding: 10px 14px;
+    background-color: #FF735C;
+    z-index: 1000; /* garantir que o sidebar fique acima do conteúdo */
+    /* border-radius: 50px; */
+    /* margin: 16px 0 16px 16px; */
+}
+
+/* reutilizável */
+.sidebar .text{
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffff;
+}
+
+.sidebar .image{
+    min-width: 60px; 
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li{
+    height: 50px;
+    margin-top: 10px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar li .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 20px;
+}
+
+.sidebar li .icon, 
+.sidebar li .text{
+    color: #F8F7F2;
+    transition: all 0.3s ease; /* transição ao passar o mouse */
+}
+
+.sidebar header{
+    position: relative;
+}
+
+.sidebar .image-text img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sidebar header .image-text{
+    display: flex;
+    align-items: center;
+}
+
+header .image-text .header-text{
+    display: flex;
+    flex-direction: column;
+}
+
+.header-text .name{
+    font-weight: 600;
+}
+
+.header-text .dashboard{
+    margin-top: -2px;
+}
+
+.sidebar header .toggle{
+    position: absolute;
+    top: 50%;
+    right: -25px;
+    transform: translateY(-50%);
+    height: 25px;
+    width: 25px;
+    background-color: #F8F7F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: solid 2px #FF735C;
+    color: #FF735C;
+    font-size: 22px;
+}
+
+.sidebar .search-box{
+    background: #FF735C;
+}
+
+.search-box input{
+    height: 60%;
+    width: 100%;
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    background: #F8F7F2;
+}
+
+.sidebar li a{
+    text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: var(--cor-principal);
+}
+
+.sidebar li a:hover{
+    background: #F8C2AA;
+    border-radius: 8px;
+}
+
+.sidebar li a:hover .icon,
+.sidebar li a:hover .text{
+    color: var(--cor-preto);
+}
+
+.sidebar .menu-bar{
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-bar .mode{
+    margin-bottom: 12px;
+}
+
+.menu-bar .mode .moon-sun{
+    height: 50px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar .mode i{
+    position: absolute;
+}
+
+.menu-bar .mode i.sun{
+    opacity: 0;
+}
+
+.menu-bar .mode .toggle-switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    min-width: 49px;
+    cursor: pointer;
+}
+
+.toggle-switch .switch{
+    position: relative;
+    height: 22px;
+    width: 35px;
+    border-radius: 25px;
+    background: var(--cor-fundo);
+}
+
+.switch::before{
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background: var(--cor-principal);
+    cursor: pointer;
+}
+
+
+/*Serviços - formulário */
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .tittle-header{
+    height: 100vh;
+    padding: 28px;
+}
+
+.form {
+    width: 50%;
+    height: 70%;
+    padding-bottom: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, .212);
+}
+
+.form-header .tittle-form{
+    padding: 46px 0;
+    font-size: 26px;
+}
+
+.form-header .tittle-form h3::after{  /*barrinha abaixo do título*/
+    content: '';
+    display: block;
+    width: 90px;
+    height: 6px;
+    background-color: #FF735C;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 8px 32px;
+}
+
+
+.input-group .input-box label{
+    display: block;
+    padding: 7px 0px;
+}
+
+
+.input-box{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box input, select{
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px #00000c;
+}
+
+.input-box textarea{
+    margin: 10px 0px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px #00000c;
+}
+
+/* Make form controls truly responsive */
+.form .input-box input,
+.form .input-box select,
+.form .input-box textarea {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 0.95rem;
+}
+
+/* Button group layout: side-by-side on larger screens, stacked on small */
+.button-anunciar-vaga {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+}
+
+.button-anunciar-vaga #btnAtualizar,
+.button-anunciar-vaga #btnExcluir,
+.button-anunciar-vaga button,
+.button-anunciar-vaga input[type="submit"] {
+    flex: 1 1 auto;
+}
+
+/* Ensure adequate spacing for mobile taps */
+#btnAtualizar, #btnExcluir {
+    padding: 12px 14px;
+    font-size: 1rem;
+}
+
+/* Tighter form container on small screens */
+@media (max-width: 768px) {
+    .form {
+        padding: 18px;
+        box-shadow: none;
+    }
+
+    .form-header .tittle-form {
+        padding: 18px 0;
+        text-align: left;
+    }
+
+    .tittle-header .tittle h1, .tittle-header .sub-tittle p {
+        text-align: left;
+    }
+}
+
+/* Improve label readability on small screens */
+.input-box label{
+    font-size: 0.95rem;
+}
+
+ .input-box label{
+    padding: 18px 0px 0px 0px;
+}
+
+#btnAtualizar{
+background-color: #4CAF50; /* verde */
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px #00000055;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btnAtualizar:hover {
+    background-color: #38833c; /* verde mais escuro */
+}
+
+#btnExcluir {
+    background-color: #e53935; /* vermelho */
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px #00000055;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btnExcluir:hover {
+    background-color: #c62828; /* vermelho mais forte */
+}
+.button-anunciar-vaga button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px #00000c;
+    cursor: pointer;
+    background: var(--cor-preto-0.5);
+    color: var(--cor-preto);
+    font-weight: 500;
+    font-size: 16px;
+}
+.button-anunciar-vaga input {
+    background-color: #FF735C;
+    color: white;
+    font-weight: 600;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0px 0px 2px #00000055;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+
+.button-anunciar-vaga button:hover{
+    background: #d8d8d8;
+    color: var(--cor-preto);
+    border: solid 1px var(--cor-preto);
+}
+
+.button-anunciar-vaga input:hover{
+    background: #F8C2AA;
+    color: var(--cor-preto);
+    border: solid 1px #FF735C;
+ }
+
+ /* ----- Responsividade Sidebar ----- */
+
+/* Para telas médias e pequenas */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 88px;
+        padding: 10px 0; 
+    }
+
+    .sidebar .text {
+        opacity: 0;
+        pointer-events: none; 
+    }
+
+    .sidebar .image img {
+        width: 40px; 
+        height: 40px; 
+        object-fit: contain;
+    }
+
+    .sidebar .image {
+        min-width: 60px; 
+        justify-content: center;
+    }
+
+    .sidebar header .image-text {
+        justify-content: center; 
+        min-width: 100%; 
+    }
+    
+    .sidebar header .image-text .header-text {
+        display: none; 
+    }
+
+    .sidebar header .toggle {
+        right: -13px;
+        transform: translateY(-50%) rotate(180deg); 
+    }
+    
+    .sidebar .search-box input {
+        display: none; 
+    }
+
+    .sidebar li {
+        margin: 10px 0;
+        justify-content: center;
+    }
+
+    .sidebar li .icon {
+        min-width: 100%;
+    }
+
+    .menu-bar .mode .mode-text {
+        display: none;
+    }
+    
+    .menu-bar .mode .toggle-switch {
+        min-width: 100%;
+        justify-content: center;
+    }
+
+    .bottom-content li a {
+        justify-content: center;
+    }
+}
+
+/* Sidebar para telas menores */
+@media (max-width: 480px) {
+    .sidebar {
+        width: 60px; 
+    }
+    
+    .sidebar header .toggle {
+        display: none;
+    }
+}
+
+/* Responsividade da Página de Serviços*/
+
+.container {
+    margin-left: 240px; 
+    width: calc(100% - 240px);
+    min-height: 100vh;
+    padding: 40px 20px; 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.container .tittle-header {
+    width: 100%; 
+    max-width: 1450px; 
+    margin-bottom: 20px; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+.form {
+    width: 100%; 
+    max-width: 1000px; 
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px 10px rgba(0, 0, 0, .212);
+    padding: 0 40px 30px 40px; 
+    margin-bottom: 50px;
+}
+
+/* Adicionando css a parte de serviços */
+main.main-content {
+    position: relative;
+    padding-left: 300px; 
+    padding-top: 10px; 
+    padding-right: 20px;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.servicos-header {
+    margin-bottom: 30px; 
+}
+
+.titulo-pagina {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.home-section{
+    position: relative;
+    padding-left: 260px;
+    transition: all 0.5s ease;
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.servicos-container {
+    padding: 40px;
+    max-width: 900px; 
+}
+
+.titulo-pagina {
+    font-size: 2.5em; 
+    font-weight: 700;
+    color: #333; 
+    margin-bottom: 10px;
+}
+
+.descricao {
+    font-size: 1em;
+    color: #666; 
+    margin-bottom: 30px;
+}
+
+.btn-adicionar-servico {
+    display: inline-flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    background-color: #FF735C; 
+    color: white;
+    width: 200px; 
+    height: 150px; 
+    padding: px;
+    border-radius: 15px; 
+    text-decoration: none;  
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.btn-adicionar-servico:hover {
+    background-color: #e55c47; 
+}
+
+
+.btn-adicionar-servico i {
+    font-size: 2.5em; 
+    margin-bottom: 5px;
+}
+
+.lista-vagas {
+    margin-top: 30px;
+}
+
+.lista-servicos {
+    margin-top: 30px;
+}
+
+.lista-vagas h2, .lista-servicos h2{
+    font-size: 1.5em;
+    margin-bottom: .5em;
+}
+
+.cards-carousel {
+    display: flex;
+    gap: 20px;     
+    overflow-x: auto;          
+    align-items: stretch;
+}
+
+
+.card {
+    flex-shrink: 0;       
+    width: 250px;
+    min-height: 200px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-titulo {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-descricao {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    line-height: 1.4;
+    min-height: 60px;
+}
+
+.cards-carousel .arrow {        
+    display: flex;
+    align-items: center;   
+    font-size: 3em;
+    color: #FF735C;
+    margin-left: 10px;
+}
+
+.card-btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #FF735C;
+    color: white;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+    margin-top: auto;
+}
+
+.card-btn:hover {
+    background-color: #e55c47;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        margin-left: 88px; 
+        width: calc(100% - 88px);
+        padding: 20px 10px; 
+    }
+
+    .form {
+        max-width: 100%;
+        padding: 0 20px 20px 20px; 
+    }
+
+    .input-group {
+        grid-template-columns: 1fr; 
+        grid-gap: 8px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .form {
+        padding: 0 10px 10px 10px;
+        box-shadow: none; 
+    }
+
+    .form-header .tittle-form {
+        padding: 20px 0 10px 0;
+    }
+}
+
+/* Additional responsive improvements for Enterprise pages */
+
+@media (max-width: 1024px) {
+    /* Narrower desktops / large tablets */
+    main.main-content {
+        padding-left: 200px; /* reduce left padding to give more space */
+    }
+
+    .cards-carousel {
+        gap: 16px;
+    }
+
+    .card {
+        width: 220px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Tablets and small screens */
+    main.main-content {
+        padding-left: 100px;
+    }
+
+    .cards-carousel {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+        overflow: visible; /* allow wrapping instead of horizontal scroll */
+        align-items: stretch;
+    }
+
+    .card {
+        width: 100%;
+        min-height: 180px;
+    }
+
+    .btn-adicionar-servico {
+        width: 160px;
+        height: 120px;
+    }
+
+    .form {
+        padding: 20px;
+    }
+
+    .input-group {
+        grid-template-columns: 1fr; /* stack inputs vertically */
+    }
+
+    #btnAtualizar, #btnExcluir, .button-anunciar-vaga button, .button-anunciar-vaga input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Mobile small */
+    .cards-carousel {
+        grid-template-columns: 1fr; /* single column list */
+    }
+
+    .card {
+        padding: 14px;
+        min-height: 160px;
+    }
+
+    .titulo-pagina {
+        font-size: 1.6em;
+    }
+
+    .descricao {
+        font-size: 0.95em;
+    }
+
+    .btn-adicionar-servico {
+        width: 140px;
+        height: 110px;
+        font-size: 0.9em;
+    }
+}
+
+/* Accessibility: make interactive elements easier to tap */
+.card-btn, #btnAtualizar, #btnExcluir {
+    touch-action: manipulation;
+}

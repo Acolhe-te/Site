@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços - Acolhe-te</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/principal.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    <!-- ICONE -->
+    <link rel="shortcut icon" href="../assets/icon/logo.png" type="image/x-icon">
+    <!-- CARROSEL -->
+    <link href="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/glider-js@1/glider.min.js"></script>
+</head>
+<body>
+    <!-- HEADER -->
+    <ul class="menu-mobile">
+        <li><a href="denuncia.html">Denúncia</a></li>
+        <li><a href="#">Voluntários</a></li>
+        <li><a href="servicos.html">Serviços</a></li>
+        <li><a href="sobrenos.html">Sobre nós</a></li>
+        <li><a href="Login/login.html" class="botao-padrao">Login</a></li>
+    </ul>
+    <header class="menu-principal">
+        <div class="menu-logo">
+        <a href="../index.html">
+            <img src="../assets/icon/logo.png" alt="coração com duas mãos" />
+            <span class="titulo-logo">Acolhe-te</span>
+        </a>
+        </div>
+        <ul class="menu-navegador">
+            <li><a href="denuncia.html" class="menu-botoes">Denúncia</a></li>
+            <li><a href="#" class="menu-botoes">Voluntários</a></li>
+            <li><a href="servicos.html" class="menu-botoes">Serviços</i></a></li>
+            <li><a href="sobrenos.html" class="menu-botoes">Sobre nós</a></li>
+            <li><a href="Login/login.html" class="botao-padrao">Login</a></li>
+        </ul>
+        <div class="menu-icon-bar">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+    </header>
+    <!-- MAIN -->
+    <main class="main-servico">
+        <section class="banner-servico">
+            <div class="info-banner">
+                <h1>Encontre sua nova oportunidade<span class="texto-vermelho">.</span></h1>
+                <div class="descricao-servico">
+                    Cada novo começo é uma chance de crescer, aprender e conquistar o seu espaço.  
+                    No Acolhe-te, conectamos você a oportunidades que valorizam suas habilidades e potencial, ajudando a construir um futuro com mais confiança e independência.  
+                </div>
+                <a href="../pages/Login/cadastro.html"><button class="botao-padrao">Cadastre-se</button></a>
+            </div>
+            <div class="image-banner">
+                <img src="../assets/image/ilustração/servico.svg" alt="Mulher encontrando uma oportunidade de emprego">
+            </div>
+        </section>
+        <!--  -->
+        <section class="busca-servico">
+            <form action="">
+                <input type="text" name="nomeVaga" id="nomeVaga" placeholder="Buscar serviço ..." class="nomeVaga input">
+                <select name="tipoVaga" id="tipoVaga" class="input">
+                    <option value="" selected disabled>Selecione um tipo</option>
+                    <option value="Emprego">Emprego</option>
+                    <option value="Curso">Curso</option>
+                    <option value="Alojamento">Alojamento</option>
+                </select>
+                <input type="text" name="lugar" id="lugar" placeholder="Localidade" class="input">
+                <input type="submit" value="Buscar" class="botao-servico">
+            </form>
+        </section>
+        <!--  -->
+        <section class="carrossel-container">
+            <h2>Serviços que você pode se interessar</h2>
+            <div class="glider-contain">
+                <div class="glider">
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Curso de Programação</h3>
+                        <p>Aprenda lógica de programação e desenvolvimento web em 3 meses.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Assistente Administrativo</h3>
+                        <p>Oportunidade para jovens com foco em organização e atendimento.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Alojamento</h3>
+                        <p>Quartos compartilhados, com segurança e conforto.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Curso de Inglês Básico</h3>
+                        <p>Desenvolva habilidades em inglês com aulas práticas.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Vaga: Estágio em TI</h3>
+                        <p>Estágio em desenvolvimento de sistemas para estudantes de TI.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Curso de Marketing Digital</h3>
+                        <p>Aprenda estratégias de marketing e redes sociais para negócios.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Alojamento Temporário</h3>
+                        <p>Disponível para mulheres de todas as idades.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Vaga: Auxiliar de Logística</h3>
+                        <p>Trabalho em armazém com suporte a estoque e entregas.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Curso de Design Gráfico</h3>
+                        <p>Aprenda a criar layouts, logotipos e conteúdo visual para projetos.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                </div>
+
+                <button aria-label="Previous" class="glider-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button aria-label="Next" class="glider-next">
+                <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div role="tablist" class="dots"></div>
+            </div>
+        </section>
+        <section class="carrossel-container">
+            <h2>Mais oportunidades para você</h2>
+            <div class="glider-contain">
+                <div class="glider" id="glider2">
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Curso de Excel Avançado</h3>
+                        <p>Domine fórmulas, gráficos e automatizações em planilhas.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Vaga: Atendimento ao Cliente</h3>
+                        <p>Oportunidade em call center para suporte e atendimento.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Alojamento Residencial</h3>
+                        <p>Quartos individuais com cozinha compartilhada e internet incluída.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Curso de Fotografia</h3>
+                        <p>Aprenda técnicas de foto, edição e composição de imagens.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Monitor de Eventos</h3>
+                        <p>Trabalho em feiras e eventos, auxiliando na organização e recepção.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Curso de Empreendedorismo</h3>
+                        <p>Descubra como abrir e gerenciar seu próprio negócio.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Alojamento Familiar</h3>
+                        <p>Espaço seguro para famílias em situações transitórias.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Assistente de Marketing</h3>
+                        <p>Auxílio em campanhas digitais, redes sociais e análise de resultados.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                    <div class="card">
+                        <div class="image"><i class="fa-solid fa-image"></i></div>
+                        <h3>Curso de Desenvolvimento Web</h3>
+                        <p>Aprenda HTML, CSS e JavaScript para criar sites modernos.</p>
+                        <a href="#"><button class="botao-padrao">Veja mais</button></a>
+                    </div>
+                </div>
+
+                <button aria-label="Previous" class="glider-prev" id="prev2">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button aria-label="Next" class="glider-next" id="next2">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                <div role="tablist" class="dots" id="dots2"></div>
+            </div>
+        </section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer">
+            <div class="footer-links">
+                <div>
+                    <span class="titulo-footer">Acolhe-te</span>
+                    <ul>
+                        <li><a href="sobrenos.html">Sobre nós</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="Footer/linksUteis.html">Links úteis</a></li>
+                        <li><a href="Footer/faq.html">FAQ</a></li>
+                        <li><a href="Footer/parceiros.html">Parceiros</a></li>
+                    </ul>
+                </div>
+                <div class="novidade-footer">
+                    <span class="novidades-footer">Receba as novidades</span>
+                    <form action="">
+                        <input type="email" name="email" id="email" class="input" placeholder="Insira seu email" required>
+                        <input type="submit" value="Inscreva-se" class="botao-alternativo">
+                    </form>
+                    <span class="info-privacidade">Ao subscrever, concordo com a nossa Política de Prividade.</span>
+                </div>
+            </div>
+            <div class="footer-termos">
+                <ul>
+                    <li><a href="Terms of use/politicaPrivacidade.html">Política de Prividade</a></li>
+                    <li><a href="Terms of use/termosServico.html">Termos de Serviço</a></li>
+                    <li><a href="Terms of use/politicaCookies.html">Política de Cookies</a></li>
+                </ul>
+                <p>&copy; Acolhe-te. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+    <!-- Script -->
+    <script>
+        const menuIcon = document.querySelector(".menu-icon-bar");
+        const menuMobile = document.querySelector(".menu-mobile");
+
+        menuIcon.addEventListener("click", () => {
+        menuMobile.classList.toggle("show");
+        menuIcon.classList.toggle("active");
+
+        if (menuMobile.classList.contains("show")) {
+            menuIcon.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+        } else {
+            menuIcon.innerHTML = '<i class="fa-solid fa-bars"></i>';
+        }
+        });
+
+        document.querySelectorAll(".menu-mobile a").forEach(link => {
+        link.addEventListener("click", () => {
+            menuMobile.classList.remove("show");
+            menuIcon.classList.remove("active");
+        });
+        });
+
+        // Cards
+        window.addEventListener('load', function () {
+            // Primeiro carrossel (já existente)
+            new Glider(document.querySelector('.glider'), {
+                slidesToShow: 9,
+                slidesToScroll: 3,
+                draggable: true,
+                dots: '.dots',
+                arrows: {
+                    prev: '.glider-prev',
+                    next: '.glider-next'
+                },
+                responsive: [
+                    { breakpoint: 1024, settings: { slidesToShow: 4 } },
+                    { breakpoint: 768, settings: { slidesToShow: 2 } },
+                    { breakpoint: 480, settings: { slidesToShow: 1 } }
+                ]
+            });
+
+            // Segundo carrossel
+            new Glider(document.querySelector('#glider2'), {
+                slidesToShow: 9,
+                slidesToScroll: 3,
+                draggable: true,
+                dots: '#dots2',
+                arrows: {
+                    prev: '#prev2',
+                    next: '#next2'
+                },
+                responsive: [
+                    { breakpoint: 1024, settings: { slidesToShow: 4 } },
+                    { breakpoint: 768, settings: { slidesToShow: 2 } },
+                    { breakpoint: 480, settings: { slidesToShow: 1 } }
+                ]
+            });
+        });
+
+
+    </script>
+</body>
+</html>
+<!-- https://desenvolvimentoparaweb.com/javascript/gliderjs-slider-carousel -->

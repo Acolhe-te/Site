@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Serviços</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../../assets/icon/logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../../assets/icon/logobranco.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Acolhe - te</span>
+                    <span class="dashboard">Dashboard</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="search" placeholder="Pesquisar...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Colaboradores</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-line-chart icon' ></i>
+                            <span class="text nav-text">Análises</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="servico.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Serviços</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon' ></i>
+                            <span class="text nav-text">Notificações</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Configurações</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#" onclick="sairConta()">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Modo Escuro</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <div class="servicos-header">
+            <h1 class="titulo-pagina">Serviços</h1>
+            <p class="descricao">Você ainda não possui vagas publicadas</p>
+                <a href="formulario.html" class="btn-adicionar-servico">
+                <i class='bx bx-plus icon'></i>
+                Adicionar Serviço
+            </a>
+        </div>
+        <section class="lista-vagas lista-servicos" id="secao-vagas"> 
+            <h2>Vagas Publicadas</h2> 
+            
+                <div class="cards-carousel">
+            </div>
+            
+        </section>
+
+
+    </main>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    
+    <script src="../../js/logout.js"></script>
+    <script src="../../js/listarVagas.js"></script>
+    <script src="../../js/editarVaga.js"></script>
+
+</body>
+</html>

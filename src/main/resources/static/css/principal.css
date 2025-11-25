@@ -1,0 +1,777 @@
+@import url("style.css");
+/*----------- MENU -----------*/
+.menu-principal{
+    width: 85%;
+    margin: 0 auto;
+    padding: 1em 0;
+    border-bottom: 1px solid var(--cor-preto);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index:100;
+}
+.menu-logo a{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+.menu-logo img{
+    width: 55px;
+}
+.titulo-logo{
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--cor-principal);
+}
+.menu-navegador{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+.menu-botoes{
+    font-weight: 500;
+    position: relative;
+}
+.menu-botoes:hover{
+    color: var(--cor-principal);
+}
+.menu-botoes i{
+    margin-left: 0.3em;
+    font-size: 0.8em;
+}
+/* MENU mobile */
+.menu-icon-bar{
+    font-size: 1.8em;
+    color: var(--cor-preto);
+    display: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+.menu-icon-bar.active{
+    transform: rotate(90deg);
+}
+.menu-mobile {
+    list-style: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--cor-principal);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+    transform: translateY(-100%);
+    transition: 0.4s ease;
+    z-index: 99;
+}
+.menu-mobile.show{
+    transform: translateY(0);
+}
+.menu-mobile a{
+    font-size: 1.2em;
+    color: var(--cor-branco);
+}
+.menu-mobile .menu-login{
+    background-color: var(--cor-branco);
+    color: var(--cor-principal);
+}
+.menu-mobile.show ~ .menu-principal {
+    border-bottom: none;
+}
+.menu-mobile.show ~ .menu-principal .menu-logo {
+    display: none;
+}
+.menu-icon-bar{
+    position: relative;
+    z-index: 101;
+    transition: all 0.3s ease;
+}
+.menu-mobile.show + header .menu-icon-bar,
+.menu-mobile.show ~ header .menu-icon-bar{
+    position: fixed;
+    top: .5em;
+    right: 7.5%;
+    color: var(--cor-branco);
+    z-index: 102;
+}
+.menu-mobile .botao-padrao{
+    color: var(--cor-principal);
+    background-color: var(--cor-branco);
+}
+/* ----------- INDEX ----------- */
+.main-home .banner{
+    width: 85%;
+    gap: 10%;
+    margin: 4em auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.main-home .banner .banner-texto{
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+.main-home .banner img{
+    width: 50%;
+}
+/* Sobre o Projeto*/
+.projeto-sobre{
+    padding: 5em 0 4em 0;
+    color: var(--cor-branco);
+    background-color: var(--cor-principal);
+}
+.projeto-box{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.projeto-box h2{
+    margin-top: .4em;
+}
+.projeto-numeros{
+    display: flex;
+    gap: 3em;
+    justify-content: center;
+}
+.projeto-numeros div{
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 100px;
+    border-radius: 1em;
+    border: 2px solid var(--cor-branco);
+}
+.projeto-numeros .numero{
+    font-size: 1.7em;
+    font-weight: 600;
+}
+.projeto-sobre .ante-texto{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+/* Sobre denúncia */
+.sobre-denuncia{
+    width: 85%;
+    margin: 5em auto;
+}
+.sobre-denuncia .box-denuncia{
+    display: flex;
+    align-items: center;
+    padding-bottom: 15vh;
+    border-bottom: 1px solid var(--cor-preto);
+}
+.sobre-denuncia .imagem-denuncia .fundo{
+    aspect-ratio: 4 / 5;
+    height: 65vh;
+    border-radius: 2em;
+    background-color: var(--cor-principal);
+    position: relative;
+}
+.sobre-denuncia .imagem-denuncia img{
+    position: absolute;
+    object-fit: cover;
+    margin-top: 10%;
+    margin-left: 10%;
+    width: 100%;
+    border-radius: 0 7em 0  0;
+}
+.sobre-denuncia .denuncia-titulo .ant-texto{
+    font-weight: 600;
+    font-size: 1.3em;
+}
+.sobre-denuncia .denuncia-titulo h2{
+    margin-top: .4em;
+}
+.sobre-denuncia .denuncia-informacao{
+    margin: 0 10%;
+    width: 100%;
+}
+.sobre-denuncia .denuncia-botoes{
+    display: flex;
+    align-items: center;
+    gap: 2em;
+}
+.denuncia-informacao{
+    display: flex;
+    gap: 5vh;
+    flex-direction: column;
+}
+/* Veja vagas */
+.veja-vagas{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 85%;
+    margin: auto;
+    padding-bottom: 5em;
+    border-bottom: 1px solid var(--cor-preto);
+}
+/* Entre em contato */
+.entre-contato{
+    width: 85%;
+    margin: 3em auto;
+    margin-bottom: 5em;
+}
+.entre-contato .informacao-contato{
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-between;
+}
+.entre-contato .informacao{
+    width: 45%;
+    gap: 2em;
+    display: flex;
+    flex-direction: column;
+}
+.entre-contato .informacao img{
+    font-size: 1.5em;
+    display: block;
+}
+.nome-contato{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+/*----------- FOOTER -----------*/
+footer{
+    padding: 3em 0;
+    background-color: var(--cor-principal);
+}
+.footer{
+    margin: auto;
+    width: 85%;
+}
+.titulo-footer{
+    font-size: 2.5em;
+    font-weight: 600;
+}
+.novidades-footer{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.footer .footer-links{
+    display: flex;
+    justify-content:space-between;
+    padding-bottom: 2em;
+    border-bottom: 1px solid var(--cor-preto);
+}
+.footer .footer-links .info-privacidade{
+    font-size: .7em;
+}
+.footer .novidade-footer{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.footer .footer-links ul, .footer-termos ul{
+    margin-top: 1em;
+    display: flex;
+    list-style: none;
+    gap: 2em;
+}
+.footer .input{
+    font-family: var(--fonte-principal);
+    border: none;
+    border-radius: 2em;
+    padding: 1em 3em 1em 1em;
+}
+.footer-termos{
+    font-size: .8em;
+    margin-top: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer a:hover{
+    color: var(--cor-principal-escura);
+}
+/*----------- RESPONSIVIDADE -----------*/
+@media (max-width:1850px) {
+    /* MENU */
+    .menu-logo img{
+        width: 4em;
+        margin-right: 1em;
+    }
+    .titulo-logo{
+        font-size: 2.3em;
+    }
+}
+@media (max-width: 1215px) {
+    .menu-logo img{
+        width: 3em;
+        margin-right: .4em;
+    }
+    .titulo-logo{
+        font-size: 2em;
+    }
+    .menu-navegador a{
+        font-size: .9em;
+    }
+    /* ENTRE EM CONTATO */
+    .entre-contato iframe{
+        width: 400px;
+    }
+    /* FOOTER */
+    .footer .footer-links ul{
+        display: block;
+    }
+}
+@media (max-width:910px) {
+    /* MENU */
+    .menu-navegador{
+        display: none;
+    }
+    .menu-icon-bar{
+        display: block;
+    }
+    /* BANNER */
+    .main-home .banner h1{
+        font-size: 2.5em;
+    }
+    .main-home .banner h2{
+        font-size: 2em;
+    }
+    /* PROJETO */
+    .projeto-sobre h2{
+        font-size: 2em;
+    }
+    /* DENUNCIA */
+    .sobre-denuncia h2{
+        font-size: 2em;
+    }
+    .sobre-denuncia .box-denuncia{
+        align-items:start;
+    }
+     /* DENUNCIA */
+    .sobre-denuncia  .box-denuncia{
+        align-items: center;
+        flex-direction: column;
+        gap: 10vh;
+    }
+    .sobre-denuncia .box-denuncia .denuncia-informacao{
+        width: 80%;
+    }
+    /* ENTRE EN CONTATO */
+    .entre-contato .informacao-contato{
+        display: block;
+    }
+    .entre-contato iframe{
+        margin-top: 3em;
+        width: 100%;
+    }
+    /* FOOTER */
+    .footer-termos ul{
+        display: block;
+    }
+}
+@media (max-width: 768px) {
+    /* MENU */
+    .menu-navegador{
+        display: none;
+    }
+    .menu-icon-bar{
+        display: inline;
+    }
+    .menu-mobile{
+        display: flex;
+    }
+    /* BANNER */
+    .main-home .banner{
+        text-align: center;
+        flex-direction: column;
+        gap: 3em;
+    }
+    .main-home .banner img{
+        width: 80%;
+    }
+    /* PROJETO */
+    .projeto-numeros{
+        gap: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .projeto-numeros div{
+        width: 100%;
+        height: 100px;
+    }
+    /* DENÚNCIA */
+    .sobre-denuncia .imagem-denuncia .fundo{
+        height: 70vh;
+    }
+    .entre-contato .informacao{
+        width: 100%;
+    }
+    /* FOOTER */
+    .footer{
+        text-align: center;
+    }
+    .footer .footer-links, .footer .footer-termos{
+        display: block;
+    }
+    .footer .footer-links ul, .footer-termos ul{
+        gap: 5%;
+        margin-bottom: 2em;
+        justify-content: center;
+        display: flex;
+    }
+}
+@media (max-width: 400px) {
+    /* MENU */
+    .titulo-logo{
+        font-size: 1.5em;
+    }
+    .menu-mobile{
+        gap: 1.5em;
+    }
+    .menu-mobile a{
+        font-size: 1em;
+    }
+    /* BANNER */
+    .main-home .banner{
+        gap: 2em;
+    }
+    .main-home .banner h1,
+    .banner-servico h1{
+        font-size: 2em;
+    }
+    .main-home .banner .banner-texto{
+        font-size: .7em;
+    }
+    .banner-servico .descricao-servico {
+        font-size: .7em;
+    }
+    .banner-servico .info-banner {
+        gap: 2em;
+    }
+    .banner-servico .image-banner {
+        width: 100%;
+    }
+    /* Cards */
+    .card {
+        padding: 0.8em;
+        gap: 0.8em;
+    }
+    .card h3 {
+        font-size: 1.2em;
+    }
+    .card p {
+        font-size: 0.7em;
+    }
+    .carrossel-container h2 {
+        font-size: 1.5em;
+    }
+    /* PROJETO */
+    .projeto-sobre .ante-texto{
+        font-size: 1em;
+    }
+    .projeto-sobre h2{
+        font-size: 1.5em;
+    }
+    .projeto-sobre p{
+        font-size: .7em;
+    }
+    .projeto-numeros .numero{
+        font-size: 1.7em;
+        font-weight: 600;
+    }
+    /* DENUNCIA */
+    .sobre-denuncia{
+        margin: 3em auto;
+    }
+    .sobre-denuncia .imagem-denuncia .fundo{
+        height: 45vh;
+    }
+    .sobre-denuncia .denuncia-titulo h2{
+        font-size: 1.5em;
+    }
+    .sobre-denuncia .denuncia-informacao{
+        text-align: center;
+    }
+    .sobre-denuncia .denuncia-botoes{
+        gap: 1em;
+        flex-direction: column;
+    }
+    .sobre-denuncia .denuncia-botoes a{
+        font-size: .7em;
+    }
+    .sobre-denuncia .denuncia-titulo .ant-texto{
+        font-size: 1em;
+    }
+    .sobre-denuncia p{
+        font-size: .7em;
+    }
+    .sobre-denuncia .box-denuncia{
+        padding-bottom: 5vh;
+    }
+    /* VAGAS */
+    .veja-vagas{
+        text-align: center;
+        gap: 1em;
+    }
+    .veja-vagas h2{
+        font-size: 1.5em;
+    }
+    .veja-vagas p, .veja-vagas a{
+        font-size: .7em;
+    }
+    /* ENTRE EM CONTATO */
+    .entre-contato .informacao-contato{
+        margin-top: 1em;
+    }
+    .entre-contato h2{
+        font-size: 1.5em;
+    }
+    .entre-contato p,.entre-contato .informacao , .entre-contato .informacao address{
+        font-size: .7em;
+    }
+    .entre-contato .nome-contato{
+        font-size: 1em;
+    }
+    .entre-contato img{
+        width: 1em;
+    }
+    /* FOOTER */
+    .titulo-footer{
+        font-size: 1.5em;
+    }
+    .footer .footer-links ul, .footer-termos ul{
+        font-size: .7em;
+        display: block;
+    }
+    .novidades-footer{
+        font-size: 1em;
+    }
+    .footer input{
+        font-size: .6em;
+    }
+    .footer-termos p, .footer .info-privacidade{
+        font-size: .7em;
+    }
+}
+/* SOBRE NÓS */
+.info-sobre-nos .texto-sobre-nos{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    width: 60%;
+}
+.info-sobre-nos img{
+    width: 100%;
+}
+.info-sobre-nos{
+    border-bottom: 1px solid var(--cor-preto);
+    width: 85%;
+    padding-bottom: 4em;
+    margin: 6em auto;
+    gap: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.texto-sobre-nos a{
+    display: flex;
+    gap: .5em;
+    align-items: center;
+}
+.texto-sobre-nos i{
+    font-size: 1.5em;
+}
+@media (max-width: 910px) {
+    .info-sobre-nos{
+        align-items: center;
+    }
+}
+@media (max-width:768px){
+    .info-sobre-nos .texto-sobre-nos{
+        margin: 1em auto;
+        width: 100%;
+    }
+    .info-sobre-nos img{
+        width: 70%;
+    }
+    .info-sobre-nos{
+        gap: 3em;
+        flex-direction: column;
+    }
+}
+/* SERVIÇO */
+.main-servico{
+    width: 85%;
+    margin: 3em auto;
+}
+.banner-servico{
+    gap: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.banner-servico .info-banner{
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    width: 50%;
+}
+.banner-servico .image-banner{
+    width: 40%;
+}
+.descricao-servico{
+    border-left: 3px solid var(--cor-preto);
+    padding-left: 1em;
+}
+.busca-servico{
+    width: 80%;
+    margin: 2em auto;
+    padding: 1em;
+    border-radius: 2em;
+    box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.237);
+}
+.busca-servico form{
+    gap: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+.busca-servico input, .busca-servico select{
+    background-color: transparent;
+    padding: .7em 2em;
+    border-radius: 1.5em;
+}
+.busca-servico .botao-servico{
+    color: var(--cor-branco);
+    cursor: pointer;
+    font-weight: 600;
+    background-color: var(--cor-principal);
+    width: 10%;
+}
+.busca-servico .botao-servico:hover{
+    transition: .5s;
+    background-color: var(--cor-principal-escura);
+}
+.busca-servico .nomeVaga{
+    width: 50%;
+}
+.busca-servico .input{
+    color: gray;
+    background-color: var(--cor-preto-05);
+}
+/* Cards */
+.carrossel-container {
+    margin: 5em auto;
+}
+.carrossel-container h2 {
+    margin-bottom: 1em;
+}
+.glider {
+    display: flex; 
+    padding: 0.5em;
+}
+.card {
+    gap: 1em;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--cor-branco);
+    border-radius: 1em;
+    padding: 1em 1em; 
+    color: #333;
+    flex: 0 0 auto;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+    margin-left: 1em;
+    margin-bottom: 2em;
+}
+.card .image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(234, 234, 234);
+    width: 100%;
+    height: 25vh;
+}
+.card .image i{
+    font-size: 2em;
+    color: gray;
+}
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Setas */
+.glider-prev,
+.glider-next {
+  position: absolute;
+  top: 40%;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--cor-principal);
+}
+
+.glider-prev {
+  left: -30px;
+}
+
+.glider-next {
+  right: -30px;
+}
+
+/* Bolinhas (dots) */
+.dots {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.dots button {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin: 0 5px;
+  border: none;
+  background-color: #ccc;
+  transition: background 0.3s ease;
+}
+
+.dots button.active {
+  background-color: var(--cor-principal);
+}
+@media (max-width: 1215px) {
+    .busca-servico {
+        width: 100%;
+    }
+}
+@media (max-width: 910px) {
+    .banner-servico{
+        flex-direction: column;
+        gap: 3em;
+    }
+    .banner-servico .info-banner{
+        width: 100%;
+    }
+    .banner-servico .image-banner{
+        width: 80%;
+    }
+    .banner-servico h1 {
+        font-size: 2em;
+    }
+    .busca-servico form{
+       flex-direction: column;
+    }
+    .busca-servico .input, .busca-servico .botao-servico{
+        width: 100%;
+    }
+    .carrossel-container h2 {
+        font-size: 1.5em;
+    }
+}

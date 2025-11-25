@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Serviços</title>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="../../assets/icon/logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="sidebar">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="../../assets/icon/logobranco.png" alt="logo">
+                </span>
+
+                <div class="text header-text">
+                    <span class="name">Acolhe - te</span>
+                    <span class="dashboard">Dashboard</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+        <div class="menu-bar">
+            <div class="menu">
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="search" placeholder="Pesquisar...">
+                </li>
+                <ul class="menu-links">
+                    <li class="nav-link">
+                        <a href="dashboard.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-user icon' ></i>
+                            <span class="text nav-text">Colaboradores</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-line-chart icon' ></i>
+                            <span class="text nav-text">Análises</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="servico.html">
+                            <i class='bx bx-home-alt icon' ></i>
+                            <span class="text nav-text">Serviços</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-bell icon' ></i>
+                            <span class="text nav-text">Notificações</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-link">
+                        <a href="#">
+                            <i class='bx bx-cog icon' ></i>
+                            <span class="text nav-text">Configurações</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#" onclick="sairConta()">
+                        <i class='bx bx-log-out icon'></i>
+                        <span class="text nav-text">Sair</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="moon-sun">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Modo Escuro</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- <div class="tittle-header">
+            <div class="tittle">
+                <h1>Serviços</h1>
+            </div>
+
+            <div class="sub-tittle">
+                <p>Adicionar Vagas</p>
+            </div>
+        </div> -->
+
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <div class="tittle-form">
+                        <h3>Formulário de Anúncio de Vagas</h3>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-box">
+                            <label for="nome">Nome do Serviço</label>
+                            <input id="nome" type="text" name="nome" placeholder="Digite o nome do cargo da vaga" required>
+                        </div>
+                        
+                        <div class="input-box">
+                            <label for="email">E-mail</label>
+                            <input id="email" type="email" name="email" placeholder="exemplo@email.com" required>
+                        </div> 
+
+                        <div class="input-box">
+                            <label for="telefone">Telefone</label>
+                            <input id="telefone" type="tel" name="telefone" placeholder="(xx)xxxxx-xxxx" required>
+                        </div>                        
+
+                        <div class="input-box">
+                            <label for="tipo">Selecione o tipo de vaga</label>
+                            <select name="tipo" id="tipo">
+                                <option value="estagio">Estágio</option>
+                                <option value="integral">Integral</option>
+                                <option value="mperiodo">Meio período</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="modalidade">Selecione o tipo de local de trabalho</label>
+                            <select name="modalidade" id="modalidade">
+                                <option value="presencial">Presencial</option>
+                                <option value="hibrido">Híbrido</option>
+                                <option value="remoto">Remoto</option>
+                            </select>
+                        </div>
+
+                        <div class="input-box">
+                            <label for="endereco">Endereço</label>
+                            <input id="endereco" type="text" name="endereco" placeholder="Insira o endereço" required>
+                        </div>                        
+                    </div>
+
+                    <div class="input-box">
+                        <label for="descricao">Descrição da vaga</label>
+                        <textarea name="descricao" id="descricao" placeholder="Descreva sobre a vaga" required rows="4"></textarea>
+                    </div>                    
+
+                </div>
+                <div class="button-anunciar-vaga">
+                   <button type="button" id="btnAtualizar">Atualizar serviço</button>
+                   <button type="button" id="btnExcluir">Apagar serviço</button>
+                </div>
+            </form>
+        </div>
+    </main>
+      <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+    <script src="../../js/logout.js"></script>
+    <script src="../../js/editarVaga.js"></script>
+</body>
+</html>

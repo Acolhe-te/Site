@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="../../css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div class="header-login">
+        <a href="../../pages/login/login.html" class="btn-voltar">
+            <i class="bx bx-arrow-back"></i>
+        </a>
+    </div>
+
+    <div class="cadastro-container">
+        <h1 class="titulo-cadastro">Crie sua conta</h1>
+        
+        <div class="type-toggle">
+            <button id="btnUsuario" class="active">Usuário</button>
+            <button id="btnEmpresa" class="inactive">Empresa</button>
+        </div>
+        
+        <form id="formUsuario" method="POST" class="cadastro-form active">
+            
+            <div class="input-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nomeCompleto" required class="form-input">
+            </div>
+
+            <div class="input-group">
+                <label for="cpf">CPF</label>
+                <input type="text" id="cpf" required class="form-input">
+            </div>
+
+            <div class="input-group">
+                <label for="nascimento">Data de Nascimento</label>
+                <input type="date" id="dataNasc" required class="form-input">
+            </div>
+
+            <div class="input-group">
+                <label for="celular">Celular</label>
+                <input type="tel" id="celular" name="celular" placeholder="" required class="form-input">
+            </div>
+
+            <div class="input-group">
+                <label for="email">Seu email</label>
+                <input type="email" id="email" name="email" required class="form-input" placeholder="">
+            </div>
+
+            <div class="input-group">
+                <label for="senha">Sua senha</label>
+                <div class="password-wrapper">
+                    <input type="password" id="senha" name="senha" required class="form-input">
+                    <span class="toggle-password">
+                        <i class="fa-regular fa-eye-slash"></i> ocultar
+                    </span>
+                </div>
+            </div>
+            
+            <button type="submit" class="btn-submit">Cadastrar</button>
+
+            <div class="terms-info">
+                Ao clicar em Cadastre-se, você concorda com nossos <a href="#">Termos</a>, 
+                <a href="#">Política de Privacidade</a> e <a href="#">Política de Cookies</a>. 
+                Você poderá receber notificações por SMS e cancelar isso quando quiser.
+            </div>
+        </form>
+
+        <form id="formEmpresa" method="POST" class="cadastro-form">
+            
+            <div class="input-group">
+                <label for="razao">Nome da Empresa</label>
+                <input type="text" id="nomeEmpresa" name="razao" required class="form-input" placeholder="Razão Social ou Nome Fantasia">
+            </div>
+            
+            <div class="input-group">
+                <label for="cnpj">CNPJ</label>
+                <input type="text" id="cnpj" name="cnpj" placeholder="" required class="form-input">
+            </div>
+
+            <div class="input-group">
+                <label for="dataAbertura">Data de Abertura</label>
+                <input type="date" id="dataAbertura" name="dataAbertura" required class="form-input">
+            </div>
+
+            <div class="input-group">
+                <label for="celularEmpresa">Celular</label>
+                <input type="tel" id="celularEmpresa" name="celularEmpresa" placeholder="" required class="form-input">
+            </div>
+
+            <div class="input-group">
+                <label for="emailEmpresa">Email</label>
+                <input type="email" id="emailEmpresa" name="emailEmpresa" required class="form-input" placeholder="">
+            </div>
+
+            <div class="input-group">
+                <label for="senhaEmpresa">Senha</label>
+                <div class="password-wrapper">
+                    <input type="password" id="senhaEmpresa" name="senhaEmpresa" required class="form-input">
+                    <span class="toggle-password">
+                        <i class="fa-regular fa-eye-slash"></i> ocultar
+                    </span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit" >Cadastrar</button>
+
+            <div class="terms-info">
+                Ao clicar em Cadastre-se, você concorda com nossos <a href="#">Termos</a>, 
+                <a href="#">Política de Privacidade</a> e <a href="#">Política de Cookies</a>. 
+                Você poderá receber notificações por SMS e cancelar isso quando quiser.
+            </div>
+        </form>
+    </div>
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+    <script src="../../js/cadastro.js"></script>
+</body>
+</html>
